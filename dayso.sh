@@ -3,21 +3,22 @@ i=0
 echo "Nhập một số bất kỳ: "
 read n
 s=0
-while [[ $i -le $n ]]
+while [[ $i -lt $n ]]
 do
-	echo -n "Nhập phần tử thứ $($i+1): "
+	echo -n "Nhập phần tử thứ $i: "
 	read number
 	eval arr[$i]=$number
 	i=$(($i+1))
 	s=$(( $s+$number ))
 done
 
-#IN RA MAN HINH DAY VUA NHAP
+#xuat day 
 i=0
-while [[ $i -le $n ]]
+while [[ $i -lt $n ]]
 do
-	echo "arr[$i]= ${arr[$i]}"
+	echo -n "${arr[$i]} "
 	i=$(($i+1))
 
 done
-echo "Tổng các số trong dãy vừa nhập là $s"
+echo -e "\n Tổng các số trong dãy vừa nhập là $s"
+
